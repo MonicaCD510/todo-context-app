@@ -7,6 +7,13 @@ function TaskList() {
   return (
     <div>
       <h2>Task List</h2>
+
+      {todos.map((todo) => (
+        <div key={todo.id}>
+          {todo.text}
+        </div>
+      ))}
+
     </div>
   );
 }
