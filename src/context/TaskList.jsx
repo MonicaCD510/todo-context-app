@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { TodoContext } from "../../context/TodoContext";
+import { TodoContext } from "../context/TodoContext";
 
 function TaskList() {
   const { todos, deleteTodo } = useContext(TodoContext);
@@ -10,11 +10,10 @@ function TaskList() {
 
       {todos.map((todo) => (
         <div key={todo.id}>
-          {todo.text}
+          <p>{todo.text}</p>
           <button onClick={() => deleteTodo(todo.id)}>Delete</button>
         </div>
       ))}
-
     </div>
   );
 }
